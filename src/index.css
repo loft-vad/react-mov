@@ -1,3 +1,7 @@
+@import-normalize; /* bring in normalize.css styles */
+
+/* rest of app styles */
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -7,7 +11,31 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Montserrat;
+  background: #888888;
+  color: #fff;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: 300;
+  line-height: 49px;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  background: none;
+  border: none;
 }

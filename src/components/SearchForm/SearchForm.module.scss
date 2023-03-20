@@ -1,0 +1,22 @@
+.searchWrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+
+  input {
+    background: rgba(50, 50, 50, 0.8);
+    mix-blend-mode: normal;
+    opacity: 0.7;
+    border-radius: 4px;
+    width: 100%;
+    border: none;
+    padding: 17px 19px 16px;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+
+    color: #FFFFFF;
+  }
+}
