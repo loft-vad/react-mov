@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 interface Props {
   initialValue?: number;
@@ -8,7 +8,7 @@ interface State {
   counter: number;
 }
 
-class CounterComponent extends React.Component<Props, State> {
+class Counter extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = {
@@ -27,17 +27,17 @@ class CounterComponent extends React.Component<Props, State> {
   };
   render() {
     return React.createElement(
-      'div',
-      { className: 'counter' },
-      React.createElement('div', null, this.state.counter),
+      "div",
+      { className: "counter" },
+      React.createElement("div", null, this.state.counter),
       React.createElement(
-        'div',
+        "div",
         null,
-        React.createElement('button', { onClick: this.counterDecrement }, '-'),
-        React.createElement('button', { onClick: this.counterIncrement }, '+'),
+        React.createElement("button", { onClick: this.counterDecrement }, "-"),
+        React.createElement("button", { onClick: this.counterIncrement }, "+"),
       ),
     );
   }
 }
 
-export default CounterComponent;
+export default Counter;
