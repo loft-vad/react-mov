@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchForm component renders an input with the value equal to initial value passed in props 1`] = `
+<div
+  class="searchWrapper"
+>
+  <input
+    placeholder="What do you want to watch?"
+    type="text"
+    value="search string"
+  />
+  <button
+    class="button"
+  >
+    Search
+  </button>
+</div>
+`;
+
+exports[`SearchForm component should match snapshot 1`] = `
+<div
+  class="searchWrapper"
+>
+  <input
+    placeholder="What do you want to watch?"
+    type="text"
+    value=""
+  />
+  <button
+    class="button"
+  >
+    Search
+  </button>
+</div>
+`;

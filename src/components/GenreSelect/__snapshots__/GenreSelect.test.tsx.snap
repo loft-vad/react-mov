@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GenreSelect component should match snapshot 1`] = `
+<div
+  class="wrapper"
+>
+  <ul>
+    <li
+      class="active"
+    >
+      <button
+        data-testid="genre"
+      >
+        All
+      </button>
+    </li>
+    <li
+      class=""
+    >
+      <button
+        data-testid="genre"
+      >
+        Documentary
+      </button>
+    </li>
+    <li
+      class=""
+    >
+      <button
+        data-testid="genre"
+      >
+        Comedy
+      </button>
+    </li>
+    <li
+      class=""
+    >
+      <button
+        data-testid="genre"
+      >
+        Horror
+      </button>
+    </li>
+    <li
+      class=""
+    >
+      <button
+        data-testid="genre"
+      >
+        Crime
+      </button>
+    </li>
+  </ul>
+</div>
+`;
