@@ -15,7 +15,7 @@
 {
   "extends": [],
   "parser": "@typescript-eslint/parser",
-  "plugins": ["@typescript-eslint", "import"],
+  "plugins": ["@typescript-eslint", "import", "cypress"],
   "settings": {
     "import/resolver": {
       "typescript": {}
