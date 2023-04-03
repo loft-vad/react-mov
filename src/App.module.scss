@@ -1,0 +1,41 @@
+header {
+  background: url(./assets/movies-header-bg.jpg) no-repeat center center;
+  overflow: hidden;
+  background-size: 98%;
+  height: 450px;
+  margin-bottom: 5px;
+
+  .wrapper {
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(4px);
+    height: 100%;
+    padding: 170px 120px;
+  }
+}
+
+.contentWrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.content {
+  padding: 0 60px;
+  background: #232323;
+}
+
+// TEMP
+.counter {
+  padding: 40px 60px;
+  font-size: 55px;
+
+  button {
+    color: #fff;
+    padding: 15px 45px;
+    font-size: 22px;
+    background: rgba(255, 255, 255, 0.2);
+    margin: 10px;
+    border-radius: 3px;
+
+  }
+}

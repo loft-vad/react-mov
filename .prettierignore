@@ -1,0 +1,17 @@
+.gitignore
+.prettierignore
+yarn.lock
+yarn-error.log
+package-lock.json
+dist
+coverage
+*.svg
+*.woff
+*.woff2
+*.png
+sonar-project.properties
+.husky
+*.snap
+storybook-static
+lib
+plop-templates
