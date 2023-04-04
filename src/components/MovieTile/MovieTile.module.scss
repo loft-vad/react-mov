@@ -1,0 +1,48 @@
+.movieTileWrapper {
+  .movieImage {
+    img {
+
+      display: block;
+    }
+
+    padding-bottom: 20px;
+  }
+
+  .movieTitle {
+    padding-bottom: 5px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+    mix-blend-mode: normal;
+    opacity: 0.7;
+  }
+
+  .moviewYear {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: #FFFFFF;
+    mix-blend-mode: normal;
+    opacity: 0.7;
+    padding: 10px 15px;
+    border: 1px solid #555555;
+    border-radius: 4px;
+  }
+
+  .movieGenres {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+    mix-blend-mode: normal;
+    opacity: 0.5;
+  }
+}
