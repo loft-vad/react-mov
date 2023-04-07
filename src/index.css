@@ -1,12 +1,14 @@
 @import-normalize; /* bring in normalize.css styles */
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap');
+@import url(./_variables.css);
+
 /* rest of app styles */
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -16,7 +18,6 @@ body {
 }
 
 body {
-  font-family: Montserrat;
   background: #888888;
   color: #fff;
 }
@@ -26,7 +27,6 @@ h1 {
   font-weight: 300;
   line-height: 49px;
   letter-spacing: 1px;
-  text-align: center;
 }
 
 ul {

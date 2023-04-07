@@ -27,9 +27,11 @@ exports[`MovieTile component should match snapshot 1`] = `
   >
     <span>
       Action & Adventure
+       
     </span>
     <span>
       Comedy
+       
     </span>
   </div>
 </div>

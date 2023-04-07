@@ -28,6 +28,6 @@ describe("MovieTile component", () => {
 
     expect(movieTileWrapper).toBeInTheDocument();
     fireEvent.click(movieTileWrapper!);
-    expect(movieTileWrapper).toHaveBeenCalled();
+    expect(onClickHandler).toHaveBeenCalled();
   });
 });

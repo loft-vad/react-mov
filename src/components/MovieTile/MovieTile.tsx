@@ -30,7 +30,7 @@ const MovieTile: React.FC<MovieTileProps> = ({
       </div>
       <div className={styles.movieGenres}>
         {genres.map((genre) => (
-          <span key={genre.id}>{genre.name}</span>
+          <span key={genre.id}>{genre.name} </span>
         ))}
       </div>
     </div>

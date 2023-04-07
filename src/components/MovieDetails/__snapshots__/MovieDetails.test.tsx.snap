@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MovieTile component should match snapshot 1`] = `
+<div
+  class="movieDetailsWrapper"
+>
+  <div
+    class="movieImage"
+  >
+    <img
+      alt="Pulp Fiction"
+      src=""
+    />
+  </div>
+  <div
+    class="movieDetails"
+  >
+    <div
+      class="movieTitle"
+    >
+      Pulp Fiction
+      <div
+        class="movieRating"
+      >
+        4
+      </div>
+    </div>
+    <div
+      class="movieGenres"
+    >
+      <span>
+        Action & Adventure
+         
+      </span>
+      <span>
+        Comedy
+         
+      </span>
+    </div>
+    <div
+      class="movieMeta"
+    >
+      <div
+        class="movieYear"
+      >
+        2004
+      </div>
+      <div
+        class="movieDuration"
+      >
+        223
+      </div>
+    </div>
+    <div
+      class="movieDescription"
+    >
+      description
+    </div>
+  </div>
+</div>
+`;
