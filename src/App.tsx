@@ -6,6 +6,12 @@ import GenreSelect, { genre } from "./components/GenreSelect/GenreSelect";
 import MovieTile from "./components/MovieTile/MovieTile";
 import MovieDetails, { MovieFull } from "./components/MovieDetails/MovieDetails";
 import moviesDb from "./data/movies";
+import SortControl, { sortByValue } from "./components/SortControl/SortControl";
+
+export const sortBy: sortByValue[] = [
+  { id: 1, name: "Release Date" },
+  { id: 2, name: "Title" },
+];
 
 const App: React.FC = () => {
   const genres: genre[] = [
@@ -30,6 +36,10 @@ const App: React.FC = () => {
     console.log("Movie tile clicked");
   };
 
+  const handleSortByClick = (name: string) => {
+    console.log("Sort By item cliecked: ", name);
+  };
+
   return (
     <div className={styles.contentWrapper}>
       <header>
@@ -43,6 +53,7 @@ const App: React.FC = () => {
       <div className={styles.content}>
         <div className={styles.searchFilter}>
           <GenreSelect genres={genres} onSelect={handleGenreSelection} />
+          <SortControl selected={sortBy[0].name} values={sortBy} onSelect={handleSortByClick} />
         </div>
         <div className={styles.moviesList}>
           {movies.map((movie) => (

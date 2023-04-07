@@ -29,6 +29,12 @@ header {
   gap: 54px;
 }
 
+.searchFilter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 // TEMP
 .counter {
   padding: 40px 60px;
