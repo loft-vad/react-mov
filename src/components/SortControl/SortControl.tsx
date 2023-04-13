@@ -15,14 +15,14 @@ export interface SortByProps {
 const SortControl: React.FC<SortByProps> = ({ values, selected, onSelect }) => {
   return (
     <div className={styles.wrapper}>
-      <select>
+      <div>Sort by</div>
+      <select
+        defaultValue={selected}
+        onChange={(e) => onSelect(e.target.value)}
+        data-testid="select"
+      >
         {values.map(({ id, name }) => (
-          <option
-            key={id}
-            value={name}
-            onClick={() => onSelect(name)}
-            selected={selected === name ? true : false}
-          >
+          <option key={id} value={name} data-testid="option">
             {name}
           </option>
         ))}

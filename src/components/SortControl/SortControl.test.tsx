@@ -12,29 +12,31 @@ describe("GenreSelect component", () => {
 
     expect(wrapper.container.firstChild).toMatchSnapshot();
   });
-  it("renders all genres passed in props", () => {
+  it("renders all sorted values passed in the props", () => {
     const wrapper = render(
       <SortControl values={sortBy} selected={sortBy[0].name} onSelect={() => {}} />,
     );
-    const renderedItems = wrapper.getAllByTestId("genre").map((item) => item.textContent);
+    const renderedItems = wrapper.getAllByTestId("option").map((item) => item.textContent);
     const inputItems = sortBy.map((item) => item.name);
     expect(renderedItems).toEqual(inputItems);
   });
-  it("highlights a selected genre passed in props", () => {
-    const activeItem = sortBy[0].name;
+  it("has name passed in props selected by default", () => {
     const wrapper = render(
       <SortControl values={sortBy} selected={sortBy[0].name} onSelect={() => {}} />,
     );
-    const activeItemElement = wrapper.container.querySelector(".active");
-    expect(activeItemElement?.textContent).toEqual(activeItem);
+    const renderedItems = wrapper.getAllByTestId("option") as HTMLOptionElement[];
+    expect(renderedItems[0].selected).toBeTruthy();
   });
-  it('after a click event on a genre button component calls "onChange" callback and passes correct genre in arguments', () => {
+  it('after a click event on any sort option calls "onSelect" callback and passes correct name in arguments', () => {
     const callback = jest.fn();
     const wrapper = render(
-      <SortControl values={sortBy} selected={sortBy[0].name} onSelect={() => {}} />,
+      <SortControl values={sortBy} selected={sortBy[0].name} onSelect={callback} />,
     );
-    const button = wrapper.container.querySelector("button");
-    fireEvent.click(button!);
-    expect(callback).toHaveBeenCalledWith(sortBy[0].name);
+    const select = wrapper.getByTestId("select");
+    const options = wrapper.getAllByTestId("option") as HTMLOptionElement[];
+    fireEvent.change(select, { target: { value: sortBy[1].name } });
+    expect(options[0].selected).toBeFalsy();
+    expect(options[1].selected).toBeTruthy();
+    expect(callback).toHaveBeenCalledWith(sortBy[1].name);
   });
 });

@@ -51,7 +51,7 @@ const moviesDb = [
     ],
   },
   {
-    id: 1,
+    id: 4,
     movieName: "Pulp Fiction",
     imageUrl: "https://m.media-amazon.com/images/M/MV5BNGNhMDIzZTUtNTBlZi00MTRlLWFjM2ItYzViMjE3YzI5MjljXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg",
     releaseYear: 1994,
@@ -68,7 +68,7 @@ const moviesDb = [
     ],
   },
   {
-    id: 2,
+    id: 5,
     movieName: "Bohemian Rhapsody",
     imageUrl: "https://m.media-amazon.com/images/M/MV5BNDg2NjIxMDUyNF5BMl5BanBnXkFtZTgwMzEzNTE1NTM@._V1_FMjpg_UY508_.jpg",
     releaseYear: 2003,
@@ -82,7 +82,7 @@ const moviesDb = [
     ],
   },
   {
-    id: 3,
+    id: 6,
     movieName: "Kill Bill: Vol 2",
     imageUrl: "https://m.media-amazon.com/images/M/MV5BNmFiYmJmN2QtNWQwMi00MzliLThiOWMtZjQxNGRhZTQ1MjgyXkEyXkFqcGdeQXVyNzQ1ODk3MTQ@._V1_FMjpg_UX580_.jpg",
     releaseYear: 1994,

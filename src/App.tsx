@@ -57,7 +57,7 @@ const App: React.FC = () => {
         </div>
         <div className={styles.moviesList}>
           {movies.map((movie) => (
-            <MovieTile movieData={movie} onClickHandler={handleMovieTileClick} />
+            <MovieTile key={movie.id} movieData={movie} onClickHandler={handleMovieTileClick} />
           ))}
         </div>
         <div className={styles.counter}>
