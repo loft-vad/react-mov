@@ -1,9 +1,9 @@
 .button {
-  color: #fff;
-  background: #F65261;
-  border: none;
+  color: var(--white);
+  background: var(--main);
+  border: 1px solid var(--main);
   border-radius: 4px;
-  padding: 18px 73px 15px;
+  padding: 17px 72px 14px;
 
   font-weight: 500;
   font-size: 20px;
@@ -13,12 +13,22 @@
 
   color: #FFFFFF;
 
+  cursor: pointer;
+
+  &[type="reset"] {
+    background: transparent;
+    color: var(--main);
+    border-color: var(--main);
+  }
+
   &:hover,
   &:focus {
     background: #bf4e59;
+    border-color: #bf4e59;
   }
 
   &:active {
     background: #a1222d;
+    border-color: #a1222d;
   }
 }

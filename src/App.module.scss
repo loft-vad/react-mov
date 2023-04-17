@@ -5,11 +5,29 @@ header {
   height: 450px;
   margin-bottom: 5px;
 
-  .wrapper {
+  .headerWrapper {
     background-color: rgba(0, 0, 0, 0.7);
     backdrop-filter: blur(4px);
     height: 100%;
-    padding: 170px 120px;
+    padding: 20px 60px;
+
+    h1 {
+      padding-bottom: 38px;
+    }
+
+    .logoSmall {
+      color: var(--main);
+    }
+
+    .headerBar {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 35px;
+    }
+
+    &>div:last-child {
+      padding: 0 60px;
+    }
   }
 }
 
@@ -20,7 +38,7 @@ header {
 
 .content {
   padding: 0 60px;
-  background: #232323;
+  background: var(--black)
 }
 
 .moviesList {

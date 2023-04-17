@@ -7,6 +7,9 @@ import MovieTile from "./components/MovieTile/MovieTile";
 import MovieDetails, { MovieFull } from "./components/MovieDetails/MovieDetails";
 import moviesDb from "./data/movies";
 import SortControl, { sortByValue } from "./components/SortControl/SortControl";
+import AddMovie from "./components/common/AddMovieButton/AddMovieButton";
+
+import { ReactComponent as LogoSmall } from "./assets/logo-small.svg";
 
 export const sortBy: sortByValue[] = [
   { id: 1, name: "Release Date" },
@@ -43,8 +46,17 @@ const App: React.FC = () => {
   return (
     <div className={styles.contentWrapper}>
       <header>
-        <div className={styles.wrapper}>
-          <SearchForm onSearch={onSearch} />
+        <div className={styles.headerWrapper}>
+          <div className={styles.headerBar}>
+            <div className={styles.logoSmall}>
+              <LogoSmall />
+            </div>
+            <AddMovie />
+          </div>
+          <div>
+            <h1>Find Your Movie</h1>
+            <SearchForm onSearch={onSearch} />
+          </div>
         </div>
       </header>
       <div>
