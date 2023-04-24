@@ -2,7 +2,7 @@ import React from "react";
 
 import SortControl from "./SortControl";
 import { fireEvent, render } from "@testing-library/react";
-import { sortBy } from "../../App";
+import { sortBy } from "../../pages/MovieListPage/MovieListPage";
 
 describe("GenreSelect component", () => {
   it("should match snapshot", () => {

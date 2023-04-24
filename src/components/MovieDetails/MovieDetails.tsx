@@ -26,8 +26,8 @@ const MovieDetails: React.FC<MovieDetailsProps> = ({
           <div className={styles.movieRating}>{rating}</div>
         </div>
         <div className={styles.movieGenres}>
-          {genres.map((genre) => (
-            <span key={genre.id}>{genre.name} </span>
+          {genres.map((genre, index) => (
+            <span key={genre + index}>{genre} </span>
           ))}
         </div>
         <div className={styles.movieMeta}>

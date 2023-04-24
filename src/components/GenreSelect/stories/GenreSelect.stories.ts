@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import GenreSelect, { genre } from "../GenreSelect";
+import GenreSelect from "../GenreSelect";
 
 const meta = {
   title: "Common/GenreSelect",
@@ -8,13 +8,7 @@ const meta = {
   tags: ["autodocs"],
 } satisfies Meta<typeof GenreSelect>;
 
-const genres: genre[] = [
-  { id: 1, name: "All" },
-  { id: 2, name: "Documentary" },
-  { id: 3, name: "Comedy" },
-  { id: 4, name: "Horror" },
-  { id: 5, name: "Crime" },
-];
+const genres: string[] = ["All", "Documentary", "Comedy", "Horror", "Crime"];
 
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -28,14 +22,14 @@ export const Default: Story = {
 export const WithSelectedValue: Story = {
   args: {
     genres: genres,
-    activeItem: genres[3].name,
+    activeItem: genres[3],
   },
 };
 
 export const WithSelectedOnClick: Story = {
   args: {
     genres: genres,
-    activeItem: genres[3].name,
+    activeItem: genres[3],
     onSelect: () => {},
   },
 };

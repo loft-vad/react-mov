@@ -1,13 +1,12 @@
 import React from "react";
 import styles from "./MovieTile.module.scss";
-import { genre } from "../GenreSelect/GenreSelect";
 
 export interface Movie {
   id: number;
   imageUrl: string;
   movieName: string;
   releaseYear: number;
-  genres: genre[];
+  genres: string[];
 }
 
 interface MovieTileProps {
@@ -29,8 +28,8 @@ const MovieTile: React.FC<MovieTileProps> = ({
         <div className={styles.moviewYear}>{releaseYear}</div>
       </div>
       <div className={styles.movieGenres}>
-        {genres.map((genre) => (
-          <span key={genre.id}>{genre.name} </span>
+        {genres.map((genre, index) => (
+          <span key={genre + index}>{genre} </span>
         ))}
       </div>
     </div>

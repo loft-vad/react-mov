@@ -8,10 +8,7 @@ const movie: Movie = {
   movieName: "Pulp Fiction",
   imageUrl: "",
   releaseYear: 2004,
-  genres: [
-    { id: 1, name: "Action & Adventure" },
-    { id: 2, name: "Comedy" },
-  ],
+  genres: ["Action & Adventure", "Comedy"],
 };
 
 describe("MovieTile component", () => {

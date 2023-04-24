@@ -7,14 +7,7 @@ const moviesDb = [
     rating: 8.9,
     duration: 194,
     description: "Jules Winnfield (Samuel L. Jackson) and Vincent Vega (John Travolta) are two hit men who are out to retrieve a suitcase stolen from their employer, mob boss Marsellus Wallace (Ving Rhames). Wallace has also asked Vincent to take his wife Mia (Uma Thurman) out a few days later when Wallace himself will be out of town. Butch Coolidge (Bruce Willis) is an aging boxer who is paid by Wallace to lose his fight. The lives of these seemingly unrelated people are woven together comprising of a series of funny, bizarre and uncalled-for incidents.—Soumitra",
-    genres: [
-      {
-        id: 1, name: "Action & Adventure"
-      },
-      {
-        id: 2, name: "Comedy"
-      },
-    ],
+    genres: ["Action & Adventure", "Comedy"],
   },
   {
     id: 2,
@@ -24,11 +17,7 @@ const moviesDb = [
     rating: 8.9,
     duration: 223,
     description: "description",
-    genres: [
-      {
-        id: 1, name: "All"
-      }
-    ],
+    genres: ["All"],
   },
   {
     id: 3,
@@ -38,17 +27,7 @@ const moviesDb = [
     rating: 8.9,
     duration: 223,
     description: "description",
-    genres: [
-      {
-        id: 1, name: "Oscar winning Movie"
-      },
-      {
-        id: 2, name: "Documentary"
-      },
-      {
-        id: 3, name: "Comedy"
-      },
-    ],
+    genres: ["Oscar winning Movie", "Documentary", "Comedy"],
   },
   {
     id: 4,
@@ -58,14 +37,7 @@ const moviesDb = [
     rating: 8.9,
     duration: 194,
     description: "Jules Winnfield (Samuel L. Jackson) and Vincent Vega (John Travolta) are two hit men who are out to retrieve a suitcase stolen from their employer, mob boss Marsellus Wallace (Ving Rhames). Wallace has also asked Vincent to take his wife Mia (Uma Thurman) out a few days later when Wallace himself will be out of town. Butch Coolidge (Bruce Willis) is an aging boxer who is paid by Wallace to lose his fight. The lives of these seemingly unrelated people are woven together comprising of a series of funny, bizarre and uncalled-for incidents.—Soumitra",
-    genres: [
-      {
-        id: 1, name: "Action & Adventure"
-      },
-      {
-        id: 2, name: "Comedy"
-      },
-    ],
+    genres: ["Action & Adventure", "Comedy"],
   },
   {
     id: 5,
@@ -75,11 +47,7 @@ const moviesDb = [
     rating: 8.9,
     duration: 223,
     description: "description",
-    genres: [
-      {
-        id: 1, name: "All"
-      }
-    ],
+    genres: ["All"],
   },
   {
     id: 6,
@@ -89,17 +57,7 @@ const moviesDb = [
     rating: 8.9,
     duration: 223,
     description: "description",
-    genres: [
-      {
-        id: 1, name: "Oscar winning Movie"
-      },
-      {
-        id: 2, name: "Documentary"
-      },
-      {
-        id: 3, name: "Comedy"
-      },
-    ],
+    genres: ["Oscar winning Movie", "Documentary", "Comedy"],
   },
 ];
 

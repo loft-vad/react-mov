@@ -11,10 +11,7 @@ const movie: MovieFull = {
   rating: 4,
   duration: 223,
   description: "description",
-  genres: [
-    { id: 1, name: "Action & Adventure" },
-    { id: 2, name: "Comedy" },
-  ],
+  genres: ["Action & Adventure", "Comedy"],
 };
 
 describe("MovieTile component", () => {

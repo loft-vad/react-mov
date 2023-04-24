@@ -1,15 +1,9 @@
 import React from "react";
 
-import GenreSelect, { genre } from "./GenreSelect";
+import GenreSelect from "./GenreSelect";
 import { fireEvent, render } from "@testing-library/react";
 
-const genres: genre[] = [
-  { id: 1, name: "All" },
-  { id: 2, name: "Documentary" },
-  { id: 3, name: "Comedy" },
-  { id: 4, name: "Horror" },
-  { id: 5, name: "Crime" },
-];
+const genres: string[] = ["All", "Documentary", "Comedy", "Horror", "Crime"];
 
 describe("GenreSelect component", () => {
   it("should match snapshot", () => {
@@ -20,11 +14,10 @@ describe("GenreSelect component", () => {
   it("renders all genres passed in props", () => {
     const wrapper = render(<GenreSelect genres={genres} onSelect={() => {}} />);
     const renderedItems = wrapper.getAllByTestId("genre").map((item) => item.textContent);
-    const inputItems = genres.map((item) => item.name);
-    expect(renderedItems).toEqual(inputItems);
+    expect(renderedItems).toEqual(genres);
   });
   it("highlights a selected genre passed in props", () => {
-    const activeItem = genres[3].name;
+    const activeItem = genres[3];
     const wrapper = render(
       <GenreSelect genres={genres} onSelect={() => {}} activeItem={activeItem} />,
     );
@@ -36,6 +29,6 @@ describe("GenreSelect component", () => {
     const wrapper = render(<GenreSelect genres={genres} onSelect={callback} />);
     const button = wrapper.container.querySelector("button");
     fireEvent.click(button!);
-    expect(callback).toHaveBeenCalledWith(genres[0].name);
+    expect(callback).toHaveBeenCalledWith(genres[0]);
   });
 });
