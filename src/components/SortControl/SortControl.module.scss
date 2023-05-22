@@ -1,0 +1,31 @@
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  align-items: center;
+
+  &>div {
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.888889px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    mix-blend-mode: normal;
+    opacity: 0.6;
+  }
+
+  select {
+    border: none;
+    background: none;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.888889px;
+    text-transform: uppercase;
+    color: var(--white);
+
+    option {
+      color: var(--black)
+    }
+  }
+}

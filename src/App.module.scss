@@ -16,12 +16,24 @@ header {
 .contentWrapper {
   max-width: 1200px;
   margin: 0 auto;
-  text-align: center;
 }
 
 .content {
   padding: 0 60px;
   background: #232323;
+}
+
+.moviesList {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 54px;
+}
+
+.searchFilter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
 }
 
 // TEMP

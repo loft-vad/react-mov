@@ -13,7 +13,7 @@
 //   "rules": {}
 // }
 {
-  "extends": [],
+  "extends": ["plugin:storybook/recommended"],
   "parser": "@typescript-eslint/parser",
   "plugins": ["@typescript-eslint", "import", "cypress"],
   "settings": {

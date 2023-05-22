@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GenreSelect component should match snapshot 1`] = `
+<div
+  class="wrapper"
+>
+  <div>
+    Sort by
+  </div>
+  <select
+    data-testid="select"
+  >
+    <option
+      data-testid="option"
+      selected=""
+      value="Release Date"
+    >
+      Release Date
+    </option>
+    <option
+      data-testid="option"
+      value="Title"
+    >
+      Title
+    </option>
+  </select>
+</div>
+`;
