@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Modal Dialog component should match snapshot 1`] = `
+<div
+  class="wrapper"
+>
+  <div>
+    <div
+      class="dialogHeader"
+    >
+      <h1 />
+      <div>
+        <button
+          class="closeBtn"
+          id="close"
+        />
+      </div>
+    </div>
+    <div
+      class="dialogContent"
+    >
+      <button>
+        Test Child for Focus Trap
+      </button>
+      <button>
+        Test Child for Focus Trap
+      </button>
+    </div>
+  </div>
+</div>
+`;

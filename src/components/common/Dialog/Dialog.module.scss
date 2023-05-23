@@ -44,3 +44,11 @@
   background-size: 100%;
   cursor: pointer;
 }
+
+.dialogActions {
+  width: 100%;
+  display: flex;
+  gap: 13px;
+  justify-content: flex-end;
+  padding-top: 60px;
+}
