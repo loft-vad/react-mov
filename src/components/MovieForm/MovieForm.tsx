@@ -16,7 +16,7 @@ const MovieForm: React.FC<MovieFormProps> = ({
     id: 0,
     imageUrl: "",
     releaseYear: 0,
-    genres: [{ id: 1, name: "All" }],
+    genres: ["All"],
   },
 }): React.ReactElement => {
   const [formState, setFormState] = useState<MovieFull>(movieInfo);
@@ -41,7 +41,7 @@ const MovieForm: React.FC<MovieFormProps> = ({
   };
 
   return (
-    <form onSubmit={formSubmit}>
+    <form onSubmit={formSubmit} role="form">
       <div className={styles.wrapper}>
         <div className={styles.inputWrapper}>
           <label htmlFor="title">Title</label>
@@ -92,10 +92,10 @@ const MovieForm: React.FC<MovieFormProps> = ({
         </div>
         <div className={styles.inputWrapper}>
           <label htmlFor="genre">Genre</label>
-          <select id="genre" name="genre" value={formState.genres[0].name} onChange={handleChange}>
+          <select id="genre" name="genre" value={formState.genres[0]} onChange={handleChange}>
             {formState.genres.map((genre) => (
-              <option key={genre.id} value={genre.name}>
-                {genre.name}
+              <option key={genre} value={genre}>
+                {genre}
               </option>
             ))}
           </select>

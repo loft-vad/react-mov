@@ -4,6 +4,7 @@ import styles from "./SortControl.module.scss";
 export interface sortByValue {
   id: number;
   name: string;
+  value?: string;
 }
 
 export interface SortByProps {
@@ -21,8 +22,8 @@ const SortControl: React.FC<SortByProps> = ({ values, selected, onSelect }) => {
         onChange={(e) => onSelect(e.target.value)}
         data-testid="select"
       >
-        {values.map(({ id, name }) => (
-          <option key={id} value={name} data-testid="option">
+        {values.map(({ id, name, value = "" }) => (
+          <option key={id} value={value} data-testid="option">
             {name}
           </option>
         ))}

@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import { useSearchParams, createSearchParams } from "react-router-dom";
+
 import styles from "./MovieListPage.module.scss";
 
 import SearchForm from "../../components/SearchForm/SearchForm";
@@ -11,8 +13,8 @@ import AddMovie from "../../components/common/AddMovieButton/AddMovieButton";
 import { ReactComponent as LogoSmall } from "../../assets/logo-small.svg";
 
 export const sortBy: sortByValue[] = [
-  { id: 1, name: "Release Date" },
-  { id: 2, name: "Title" },
+  { id: 1, name: "Release Date", value: "release_date" },
+  { id: 2, name: "Title", value: "title" },
 ];
 
 interface MovieApiData {
@@ -30,12 +32,19 @@ interface MovieApiData {
   id: number;
 }
 
-const moviesApiUrl = "http://localhost:4000/movies?";
+const moviesApiUrl = "http://localhost:4000/movies";
 
 const MovieListPage: React.FC = () => {
-  const [searchQuery, setSearchQuery] = useState("");
-  const [sortCriterion, setSortCriterion] = useState(sortBy[0].name);
-  const [activeGenre, setActiveGenre] = useState<string>("All");
+  let [searchParams, setSearchParams] = useSearchParams();
+
+  const defaultSearchQuery = searchParams.get("search") || "";
+  const defaultSortCriterion = searchParams.get("sortBy") || "";
+  const defaultActiveGenre = searchParams.get("genre") || "all";
+
+  const [searchQuery, setSearchQuery] = useState(defaultSearchQuery);
+  const [sortCriterion, setSortCriterion] = useState(defaultSortCriterion);
+  const [activeGenre, setActiveGenre] = useState<string>(defaultActiveGenre);
+
   const [movieList, setMovieList] = useState<MovieFull[]>([]);
   const [selectedMovie, setSelectedMovie] = useState<MovieFull | null>(null);
   const [loading, setLoading] = useState(false);
@@ -49,27 +58,22 @@ const MovieListPage: React.FC = () => {
     "Crime",
     "Fantasy",
     "Adventure",
-    "Science Fiction",
   ];
 
-  const onSearch = (searchString: string) => {
-    console.log("searchString ", searchString);
-    setSearchQuery(searchString);
+  const onSearch = (searchBy: string) => {
+    setSearchQuery(searchBy);
   };
 
   const handleGenreSelection = (name: string) => {
-    console.log(name, " clicked");
     setActiveGenre(name);
   };
 
-  const handleMovieTileClick = (movie: MovieFull) => {
-    console.log("Movie tile clicked");
-    setSelectedMovie(movie);
+  const handleSortByClick = (criterion: string) => {
+    setSortCriterion(criterion);
   };
 
-  const handleSortByClick = (criterion: string) => {
-    console.log("Sort By item cliecked: ", criterion);
-    setSortCriterion(criterion);
+  const handleMovieTileClick = (movie: MovieFull) => {
+    setSelectedMovie(movie);
   };
 
   const dataTransform = (movieApi: MovieApiData[]): MovieFull[] => {
@@ -95,17 +99,33 @@ const MovieListPage: React.FC = () => {
     setController(newController);
     setLoading(true);
 
-    let apiUrl = `${moviesApiUrl}`;
-    if (activeGenre !== "All") {
-      apiUrl = apiUrl + `searchBy=genres&search=${activeGenre}`;
+    let params = {};
+
+    let apiUrl = `${moviesApiUrl}/?`;
+    if (activeGenre !== "all") {
+      params = {
+        ...params,
+        searchBy: "genres",
+        search: activeGenre,
+      };
     }
     if (searchQuery !== "") {
-      apiUrl = apiUrl + `searchBy=title&search=${searchQuery}`;
+      params = {
+        ...params,
+        searchBy: "title",
+        search: searchQuery,
+      };
     }
-    if (sortCriterion !== sortBy[0].name) {
-      apiUrl = apiUrl + `sortBy=${sortCriterion.toLowerCase()}&sortOrder=asc`;
+    if (sortCriterion !== "") {
+      params = {
+        ...params,
+        sortOrder: "asc",
+        sortBy: sortCriterion.toLowerCase(),
+      };
     }
-    console.log("apiUrl: ", apiUrl);
+
+    setSearchParams(params);
+    apiUrl = moviesApiUrl + "/?" + createSearchParams(params);
 
     fetch(apiUrl, { signal: newController.signal })
       .then((response) => response.json())
@@ -160,7 +180,7 @@ const MovieListPage: React.FC = () => {
           ))}
         </div>
 
-        {loading ? <div>Loading...</div> : <div>Loaded</div>}
+        {loading ? <div>Loading...</div> : <div>&nbsp;</div>}
       </div>
     </>
   );
