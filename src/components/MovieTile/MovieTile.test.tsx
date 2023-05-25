@@ -5,8 +5,8 @@ import { fireEvent, render } from "@testing-library/react";
 
 const movie: Movie = {
   id: 1,
-  movieName: "Pulp Fiction",
-  imageUrl: "",
+  title: "Pulp Fiction",
+  poster_path: "",
   releaseYear: 2004,
   genres: ["Action & Adventure", "Comedy"],
 };

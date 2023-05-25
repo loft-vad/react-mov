@@ -9,12 +9,12 @@ interface MovieFormProps {
 
 const MovieForm: React.FC<MovieFormProps> = ({
   movieInfo = {
-    movieName: "",
+    title: "",
     rating: 0,
     duration: 0,
-    description: "",
+    overview: "",
     id: 0,
-    imageUrl: "",
+    poster_path: "",
     releaseYear: 0,
     genres: ["All"],
   },
@@ -46,11 +46,11 @@ const MovieForm: React.FC<MovieFormProps> = ({
         <div className={styles.inputWrapper}>
           <label htmlFor="title">Title</label>
           <input
-            id="movieName"
-            name="movieName"
+            id="title"
+            name="title"
             type="text"
             placeholder=""
-            value={formState.movieName}
+            value={formState.title}
             onChange={handleChange}
           />
         </div>
@@ -75,7 +75,7 @@ const MovieForm: React.FC<MovieFormProps> = ({
             name="url"
             type="text"
             placeholder=""
-            value={formState.imageUrl}
+            value={formState.poster_path}
             onChange={handleChange}
           />
         </div>
@@ -112,13 +112,13 @@ const MovieForm: React.FC<MovieFormProps> = ({
           />
         </div>
         <div className={styles.inputWrapper + " " + styles.fullWidth}>
-          <label htmlFor="description">Overview</label>
+          <label htmlFor="overview">Overview</label>
           <textarea
-            id="description"
-            name="description"
+            id="overview"
+            name="overview"
             rows={5}
             placeholder="Movie description"
-            value={formState.description}
+            value={formState.overview}
             onChange={handleChange}
           />
         </div>

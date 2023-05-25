@@ -15,22 +15,22 @@ describe("MovieListPage", () => {
       {
         id: 1,
         genres: ["Action"],
-        imageUrl: "/path/to/image1.jpg",
-        movieName: "Movie 1",
+        poster_path: "/path/to/image1.jpg",
+        title: "Movie 1",
         releaseYear: 2021,
         rating: 7.5,
         duration: 120,
-        description: "Movie 1 description",
+        overview: "Movie 1 description",
       },
       {
         id: 2,
         genres: ["Comedy"],
-        imageUrl: "/path/to/image2.jpg",
-        movieName: "Movie 2",
+        poster_path: "/path/to/image2.jpg",
+        title: "Movie 2",
         releaseYear: 2022,
         rating: 8.0,
         duration: 110,
-        description: "Movie 2 description",
+        overview: "Movie 2 description",
       },
     ];
 
@@ -68,12 +68,12 @@ describe("MovieListPage", () => {
       {
         id: 1,
         genres: ["Action"],
-        imageUrl: "/path/to/image1.jpg",
-        movieName: "Movie 1",
+        poster_path: "/path/to/image1.jpg",
+        title: "Movie 1",
         releaseYear: 2021,
         rating: 7.5,
         duration: 120,
-        description: "Movie 1 description",
+        overview: "Movie 1 description",
       },
     ];
 
@@ -103,12 +103,12 @@ describe("MovieListPage", () => {
   //     {
   //       id: 1,
   //       genres: ["Action"],
-  //       imageUrl: "/path/to/image1.jpg",
-  //       movieName: "Movie 1",
+  //       poster_path: "/path/to/image1.jpg",
+  //       title: "Movie 1",
   //       releaseYear: 2021,
   //       rating: 7.5,
   //       duration: 120,
-  //       description: "Movie 1 description",
+  //       overview: "Movie 1 description",
   //     },
   //   ];
 

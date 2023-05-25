@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { useSearchParams, createSearchParams } from "react-router-dom";
+import { useSearchParams, createSearchParams, Outlet } from "react-router-dom";
 
 import styles from "./MovieListPage.module.scss";
 
 import SearchForm from "../../components/SearchForm/SearchForm";
 import GenreSelect from "../../components/GenreSelect/GenreSelect";
 import MovieTile from "../../components/MovieTile/MovieTile";
-import MovieDetails, { MovieFull } from "../../components/MovieDetails/MovieDetails";
+import { MovieFull } from "../../components/MovieDetails/MovieDetails";
 import SortControl, { sortByValue } from "../../components/SortControl/SortControl";
 import AddMovie from "../../components/common/AddMovieButton/AddMovieButton";
 
@@ -46,7 +46,6 @@ const MovieListPage: React.FC = () => {
   const [activeGenre, setActiveGenre] = useState<string>(defaultActiveGenre);
 
   const [movieList, setMovieList] = useState<MovieFull[]>([]);
-  const [selectedMovie, setSelectedMovie] = useState<MovieFull | null>(null);
   const [loading, setLoading] = useState(false);
   const [controller, setController] = useState(new AbortController());
 
@@ -72,22 +71,18 @@ const MovieListPage: React.FC = () => {
     setSortCriterion(criterion);
   };
 
-  const handleMovieTileClick = (movie: MovieFull) => {
-    setSelectedMovie(movie);
-  };
-
   const dataTransform = (movieApi: MovieApiData[]): MovieFull[] => {
     return movieApi.map(
       ({ id, genres, poster_path, title, release_date, vote_average, overview, runtime }) => {
         return {
           id,
           genres,
-          imageUrl: poster_path,
-          movieName: title,
+          poster_path,
+          title: title,
           releaseYear: +release_date.slice(0, 4),
           rating: vote_average,
           duration: runtime,
-          description: overview,
+          overview: overview,
         };
       },
     );
@@ -141,46 +136,37 @@ const MovieListPage: React.FC = () => {
     return () => {
       newController.abort();
     };
-  }, [searchQuery, sortCriterion, activeGenre]);
+  }, [searchQuery, sortCriterion, activeGenre, setSearchParams]);
 
   return (
     <>
-      {selectedMovie ? (
-        <div>
-          <MovieDetails movieData={selectedMovie} />
-        </div>
-      ) : (
-        <header>
-          <div className={styles.headerWrapper}>
-            <div className={styles.headerBar}>
-              <div className={styles.logoSmall}>
-                <LogoSmall />
-              </div>
-              <AddMovie />
+      <header>
+        <div className={styles.headerWrapper}>
+          <div className={styles.headerBar}>
+            <div className={styles.logoSmall}>
+              <LogoSmall />
             </div>
-            <div>
-              <h1>Find Your Movie</h1>
-              <SearchForm onSearch={onSearch} />
-            </div>
+            <AddMovie />
           </div>
-        </header>
-      )}
+          <div>
+            <h1>Find Your Movie</h1>
+            <SearchForm onSearch={onSearch} />
+          </div>
+        </div>
+      </header>
       <div className={styles.content}>
+        <Outlet />
         <div className={styles.searchFilter}>
           <GenreSelect genres={genres} onSelect={handleGenreSelection} />
           <SortControl selected={sortCriterion} values={sortBy} onSelect={handleSortByClick} />
         </div>
         <div className={styles.moviesList}>
-          {movieList.map((movie) => (
-            <MovieTile
-              key={movie.id}
-              movieData={movie}
-              onClickHandler={() => handleMovieTileClick(movie)}
-            />
-          ))}
+          {movieList.length ? (
+            movieList.map((movie) => <MovieTile key={movie.id} movieData={movie} />)
+          ) : (
+            <div>{loading} Loading...</div>
+          )}
         </div>
-
-        {loading ? <div>Loading...</div> : <div>&nbsp;</div>}
       </div>
     </>
   );

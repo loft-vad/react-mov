@@ -5,12 +5,12 @@ import { render } from "@testing-library/react";
 
 const movie: MovieFull = {
   id: 1,
-  movieName: "Pulp Fiction",
-  imageUrl: "",
+  title: "Pulp Fiction",
+  poster_path: "",
   releaseYear: 2004,
   rating: 4,
   duration: 223,
-  description: "description",
+  overview: "description",
   genres: ["Action & Adventure", "Comedy"],
 };
 

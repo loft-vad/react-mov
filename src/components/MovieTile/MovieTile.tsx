@@ -1,37 +1,40 @@
 import React from "react";
 import styles from "./MovieTile.module.scss";
+import { Link } from "react-router-dom";
 
 export interface Movie {
   id: number;
-  imageUrl: string;
-  movieName: string;
+  poster_path: string;
+  title: string;
   releaseYear: number;
   genres: string[];
 }
 
 interface MovieTileProps {
   movieData: Movie;
-  onClickHandler: () => void;
+  onClickHandler?: () => void;
 }
 
 const MovieTile: React.FC<MovieTileProps> = ({
-  movieData: { imageUrl, movieName, releaseYear, genres },
+  movieData: { poster_path, title, releaseYear, genres, id },
   onClickHandler,
 }) => {
   return (
     <div className={styles.movieTileWrapper} onClick={onClickHandler}>
-      <div className={styles.movieImage}>
-        <img src={imageUrl} alt={movieName} />
-      </div>
-      <div className={styles.movieTitle}>
-        {movieName}
-        <div className={styles.moviewYear}>{releaseYear}</div>
-      </div>
-      <div className={styles.movieGenres}>
-        {genres.map((genre, index) => (
-          <span key={genre + index}>{genre} </span>
-        ))}
-      </div>
+      <Link to={"" + id}>
+        <div className={styles.movieImage}>
+          <img src={poster_path} alt={title} />
+        </div>
+        <div className={styles.movieTitle}>
+          {title}
+          <div className={styles.moviewYear}>{releaseYear}</div>
+        </div>
+        <div className={styles.movieGenres}>
+          {genres.map((genre, index) => (
+            <span key={genre + index}>{genre} </span>
+          ))}
+        </div>
+      </Link>
     </div>
   );
 };
