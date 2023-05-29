@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
 import SortControl from "../SortControl";
-import { sortBy } from "../../../App";
+import { sortBy } from "../../../pages/MovieListPage/MovieListPage";
 
 const meta = {
   title: "Common/SortControl",

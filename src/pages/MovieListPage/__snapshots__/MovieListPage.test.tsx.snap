@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MovieTile component should match snapshot 1`] = `
+<header>
+  <div
+    class="headerWrapper"
+  >
+    <div
+      class="headerBar"
+    >
+      <div
+        class="logoSmall"
+      >
+        <svg>
+          logo-small.svg
+        </svg>
+      </div>
+      <button
+        class="addMovieButton"
+      >
+        + Add Movie
+      </button>
+    </div>
+    <div>
+      <h1>
+        Find Your Movie
+      </h1>
+      <div
+        class="searchWrapper"
+      >
+        <input
+          placeholder="What do you want to watch?"
+          type="text"
+          value=""
+        />
+        <button
+          class="button"
+          type="button"
+        >
+          Search
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+`;
