@@ -12,14 +12,13 @@ exports[`GenreSelect component should match snapshot 1`] = `
   >
     <option
       data-testid="option"
-      selected=""
-      value="Release Date"
+      value="release_date"
     >
       Release Date
     </option>
     <option
       data-testid="option"
-      value="Title"
+      value="title"
     >
       Title
     </option>

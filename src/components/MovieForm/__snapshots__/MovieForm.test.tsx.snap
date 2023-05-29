@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`MovieForm component should match snapshot 1`] = `
-<form>
+<form
+  role="form"
+>
   <div
     class="wrapper"
   >
@@ -14,8 +16,8 @@ exports[`MovieForm component should match snapshot 1`] = `
         Title
       </label>
       <input
-        id="movieName"
-        name="movieName"
+        id="title"
+        name="title"
         placeholder=""
         type="text"
         value=""
@@ -111,13 +113,13 @@ exports[`MovieForm component should match snapshot 1`] = `
       class="inputWrapper fullWidth"
     >
       <label
-        for="description"
+        for="overview"
       >
         Overview
       </label>
       <textarea
-        id="description"
-        name="description"
+        id="overview"
+        name="overview"
         placeholder="Movie description"
         rows="5"
       />

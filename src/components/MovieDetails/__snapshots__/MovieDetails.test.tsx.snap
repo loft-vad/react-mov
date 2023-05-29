@@ -8,7 +8,7 @@ exports[`MovieTile component should match snapshot 1`] = `
     class="movieImage"
   >
     <img
-      alt="Pulp Fiction"
+      alt=""
       src=""
     />
   </div>
@@ -18,9 +18,7 @@ exports[`MovieTile component should match snapshot 1`] = `
     <div
       class="movieTitle"
     >
-      <h1>
-        Pulp Fiction
-      </h1>
+      <h1 />
       <div
         class="movieRating"
       >

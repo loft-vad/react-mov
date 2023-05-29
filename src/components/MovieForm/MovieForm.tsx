@@ -9,14 +9,14 @@ interface MovieFormProps {
 
 const MovieForm: React.FC<MovieFormProps> = ({
   movieInfo = {
-    movieName: "",
+    title: "",
     rating: 0,
     duration: 0,
-    description: "",
+    overview: "",
     id: 0,
-    imageUrl: "",
+    poster_path: "",
     releaseYear: 0,
-    genres: [{ id: 1, name: "All" }],
+    genres: ["All"],
   },
 }): React.ReactElement => {
   const [formState, setFormState] = useState<MovieFull>(movieInfo);
@@ -41,16 +41,16 @@ const MovieForm: React.FC<MovieFormProps> = ({
   };
 
   return (
-    <form onSubmit={formSubmit}>
+    <form onSubmit={formSubmit} role="form">
       <div className={styles.wrapper}>
         <div className={styles.inputWrapper}>
           <label htmlFor="title">Title</label>
           <input
-            id="movieName"
-            name="movieName"
+            id="title"
+            name="title"
             type="text"
             placeholder=""
-            value={formState.movieName}
+            value={formState.title}
             onChange={handleChange}
           />
         </div>
@@ -75,7 +75,7 @@ const MovieForm: React.FC<MovieFormProps> = ({
             name="url"
             type="text"
             placeholder=""
-            value={formState.imageUrl}
+            value={formState.poster_path}
             onChange={handleChange}
           />
         </div>
@@ -92,10 +92,10 @@ const MovieForm: React.FC<MovieFormProps> = ({
         </div>
         <div className={styles.inputWrapper}>
           <label htmlFor="genre">Genre</label>
-          <select id="genre" name="genre" value={formState.genres[0].name} onChange={handleChange}>
+          <select id="genre" name="genre" value={formState.genres[0]} onChange={handleChange}>
             {formState.genres.map((genre) => (
-              <option key={genre.id} value={genre.name}>
-                {genre.name}
+              <option key={genre} value={genre}>
+                {genre}
               </option>
             ))}
           </select>
@@ -112,13 +112,13 @@ const MovieForm: React.FC<MovieFormProps> = ({
           />
         </div>
         <div className={styles.inputWrapper + " " + styles.fullWidth}>
-          <label htmlFor="description">Overview</label>
+          <label htmlFor="overview">Overview</label>
           <textarea
-            id="description"
-            name="description"
+            id="overview"
+            name="overview"
             rows={5}
             placeholder="Movie description"
-            value={formState.description}
+            value={formState.overview}
             onChange={handleChange}
           />
         </div>
