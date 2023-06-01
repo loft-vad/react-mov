@@ -1,0 +1,61 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+
+  input,
+  select,
+  textarea {
+    width: 100%;
+    border: none;
+    background: rgba(50, 50, 50, 0.948044);
+    mix-blend-mode: normal;
+    opacity: 0.8;
+    border-radius: 4px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+
+    color: var(--white);
+    padding: 17px 18px 16px;
+
+    &::placeholder {
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 24px;
+
+      color: var(--white);
+
+      mix-blend-mode: normal;
+      opacity: 0.3;
+    }
+  }
+
+  .inputWrapper {
+    label {
+      padding-bottom: 13px;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 20px;
+      letter-spacing: 0.888889px;
+      text-transform: uppercase;
+      color: var(--main);
+      mix-blend-mode: normal;
+      opacity: 0.8;
+      display: block;
+    }
+
+    &.fullWidth {
+      grid-column: 1 / 3;
+    }
+  }
+
+}
+
+.formActions {
+  width: 100%;
+  display: flex;
+  gap: 13px;
+  justify-content: flex-end;
+  padding-top: 60px;
+}

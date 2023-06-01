@@ -2,7 +2,8 @@ import { useState } from "react";
 import { createPortal } from "react-dom";
 import styles from "./AddMovieButton.module.scss";
 import Modal from "../Dialog/Dialog";
-import MovieForm from "../../MovieForm/MovieForm";
+// import MovieForm from "../../MovieForm/MovieForm";
+import AddMovieForm from "../../AddMovieForm/AddMovieForm";
 
 const AddMovie: React.FC = () => {
   const [showModal, setShowModal] = useState(false);
@@ -14,7 +15,8 @@ const AddMovie: React.FC = () => {
       {showModal &&
         createPortal(
           <Modal title="Add Movie" onClose={() => setShowModal(false)}>
-            <MovieForm />
+            {/* <MovieForm /> */}
+            <AddMovieForm />
           </Modal>,
           document.body,
         )}

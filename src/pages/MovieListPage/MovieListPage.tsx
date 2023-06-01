@@ -72,6 +72,7 @@ const MovieListPage: React.FC = () => {
   };
 
   const dataTransform = (movieApi: MovieApiData[]): MovieFull[] => {
+    // console.log("movieApi: ", movieApi[0]);
     return movieApi.map(
       ({ id, genres, poster_path, title, release_date, vote_average, overview, runtime }) => {
         return {
