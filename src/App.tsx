@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import ErrorPage from "./pages/ErrorPage/ErrorPage";
 import MovieDetails from "./components/MovieDetails/MovieDetails";
+import AddMovieForm from "./components/AddMovieForm/AddMovieForm";
 
 import moviesDb from "./data/movies";
 
@@ -17,6 +18,11 @@ const router = createBrowserRouter([
   {
     path: "/:movieId",
     element: <MovieDetails movieData={moviesDb[0]} />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/new",
+    element: <AddMovieForm />,
     errorElement: <ErrorPage />,
   },
 ]);
