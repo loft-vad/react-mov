@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./GenreSelect.module.scss";
+import styles from "./GenreSelect.module.css";
 
 export interface GenreProps {
   genres: string[];

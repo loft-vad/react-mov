@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./Dialog.module.scss";
+import styles from "./Dialog.module.css";
 import FocusTrap from "focus-trap-react";
 import Button from "../Button/Button";
 

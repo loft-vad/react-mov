@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./AddMovieForm.module.scss";
+import styles from "./AddMovieForm.module.css";
 import Button from "../common/Button/Button";
 import { SubmitHandler, UseFormRegister, useForm } from "react-hook-form";
 

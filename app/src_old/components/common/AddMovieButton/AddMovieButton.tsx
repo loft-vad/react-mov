@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { createPortal } from "react-dom";
-import styles from "./AddMovieButton.module.scss";
+import styles from "./AddMovieButton.module.css";
 import Modal from "../Dialog/Dialog";
 // import MovieForm from "../../MovieForm/MovieForm";
 import AddMovieForm from "../../AddMovieForm/AddMovieForm";

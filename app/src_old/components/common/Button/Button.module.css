@@ -1,0 +1,29 @@
+.button {
+  color: var(--white);
+  background: var(--main);
+  border: 1px solid var(--main);
+  border-radius: 4px;
+  padding: 17px 72px 14px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+.button[type=reset] {
+  background: transparent;
+  color: var(--main);
+  border-color: var(--main);
+}
+.button:hover, .button:focus {
+  background: #bf4e59;
+  border-color: #bf4e59;
+}
+.button:active {
+  background: #a1222d;
+  border-color: #a1222d;
+}
+
+/*# sourceMappingURL=Button.module.css.map */

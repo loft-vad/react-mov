@@ -1,5 +1,6 @@
 import React from "react";
-import styles from "./Button.module.scss";
+// import styles from "./Button.module.scss";
+import styles from "../Button/Button.module.css";
 interface ButtonProps {
   text?: string;
   callBack?: () => void;

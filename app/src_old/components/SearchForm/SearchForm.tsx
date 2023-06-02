@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "./SearchForm.module.scss";
+import styles from "./SearchForm.module.css";
 import Button from "../common/Button/Button";
 
 interface SearchProps {

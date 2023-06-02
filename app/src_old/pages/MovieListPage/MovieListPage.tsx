@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useSearchParams, createSearchParams, Outlet } from "react-router-dom";
 
-import styles from "./MovieListPage.module.scss";
+import styles from "./MovieListPage.module.css";
 
 import SearchForm from "../../components/SearchForm/SearchForm";
 import GenreSelect from "../../components/GenreSelect/GenreSelect";
@@ -10,7 +10,7 @@ import { MovieFull } from "../../components/MovieDetails/MovieDetails";
 import SortControl, { sortByValue } from "../../components/SortControl/SortControl";
 import AddMovie from "../../components/common/AddMovieButton/AddMovieButton";
 
-import { ReactComponent as LogoSmall } from "../../assets/logo-small.svg";
+// import { ReactComponent as LogoSmall } from "../../assets/logo-small.svg";
 
 export const sortBy: sortByValue[] = [
   { id: 1, name: "Release Date", value: "release_date" },
@@ -144,9 +144,7 @@ const MovieListPage: React.FC = () => {
       <header>
         <div className={styles.headerWrapper}>
           <div className={styles.headerBar}>
-            <div className={styles.logoSmall}>
-              <LogoSmall />
-            </div>
+            <div className={styles.logoSmall}>{/* <LogoSmall /> */}</div>
             <AddMovie />
           </div>
           <div>

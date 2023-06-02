@@ -1,4 +1,4 @@
-import styles from "./MovieForm.module.scss";
+import styles from "./MovieForm.module.css";
 import Button from "../common/Button/Button";
 import { MovieFull } from "../MovieDetails/MovieDetails";
 import { useState } from "react";

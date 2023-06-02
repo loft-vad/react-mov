@@ -1,0 +1,60 @@
+header {
+  background: url(./../../assets/movies-header-bg.jpg) no-repeat center center;
+  overflow: hidden;
+  background-size: 98%;
+  height: 450px;
+  margin-bottom: 5px;
+}
+header .headerWrapper {
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
+  height: 100%;
+  padding: 20px 60px;
+}
+header .headerWrapper h1 {
+  padding-bottom: 38px;
+}
+header .headerWrapper .logoSmall {
+  color: var(--main);
+}
+header .headerWrapper .headerBar {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 35px;
+}
+header .headerWrapper > div:last-child {
+  padding: 0 60px;
+}
+
+.content {
+  padding: 0 60px;
+  background: var(--black);
+}
+
+.moviesList {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 54px;
+}
+
+.searchFilter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.counter {
+  padding: 40px 60px;
+  font-size: 55px;
+}
+.counter button {
+  color: #fff;
+  padding: 15px 45px;
+  font-size: 22px;
+  background: rgba(255, 255, 255, 0.2);
+  margin: 10px;
+  border-radius: 3px;
+}
+
+/*# sourceMappingURL=MovieListPage.module.css.map */

@@ -1,0 +1,41 @@
+.wrapper {
+  display: flex;
+  border-bottom: 1px solid #080707;
+}
+.wrapper input {
+  background: rgba(50, 50, 50, 0.8);
+  mix-blend-mode: normal;
+  opacity: 0.7;
+  border-radius: 4px;
+  width: 100%;
+  border: none;
+  padding: 17px 19px 16px;
+  font-style: normal;
+  font-weight: 400;
+  mix-blend-mode: normal;
+  opacity: 0.3;
+}
+.wrapper ul {
+  display: flex;
+  gap: 30px;
+  border-bottom: 2px solid #424242;
+  margin-bottom: 1px;
+  width: 100%;
+}
+.wrapper ul li {
+  border-bottom: 3px solid transparent;
+  margin-bottom: -3px;
+}
+.wrapper ul li.active {
+  border-color: #F65261;
+}
+.wrapper ul li button {
+  color: #fff;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  padding: 20px 0;
+}
+
+/*# sourceMappingURL=GenreSelect.module.css.map */

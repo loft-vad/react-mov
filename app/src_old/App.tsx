@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./App.module.scss";
+import styles from "./App.module.css";
 import MovieListPage from "./pages/MovieListPage/MovieListPage";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 

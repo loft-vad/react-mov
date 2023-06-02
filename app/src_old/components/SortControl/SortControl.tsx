@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./SortControl.module.scss";
+import styles from "./SortControl.module.css";
 
 export interface sortByValue {
   id: number;
